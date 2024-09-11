@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSSExperiment</title>
+    <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+             
+    body {
+        text-align: center;
+    }
+
+    .container {
+                display: flex;
+                gap: 10 px;
+                justify-content: center;
+            }
+
+    .title {
+      background: url(somke.gif);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 5em;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .flex-item2 {
+        
+                background: url('tooth2.png');
+                background-size: 100px;
+                background-position: center;
+                padding: 55px;
+                text-align: center;
+                flex: 1;
+            }
+
+    .flex-item1 {
+        background: url('tooth.png');
+                background-size: 100px;
+                background-position: center;
+                padding: 55px;
+                text-align: center;
+                flex: 1;
+            }
+
+
+    </style>
+</head>
+<body>
+    <div class="title">RICHMOND SIMULATOR</div>
+    <div class="container"><marquee direction="up" height="170px" behavior="alternate">
+        <div class="flex-item2"></div>
+    </marquee>
+    </div>
+
+        <img src="cigarette.png" style="width: 500px">
+
+    <div class="container"><marquee direction="up" scrollamount="15" height="170px" behavior="alternate">
+            <div class="flex-item1"></div>
+    </marquee>
+    </div>
+</body>
+</html>
