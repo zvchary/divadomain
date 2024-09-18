@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    * {
+        margin:0;
+        padding:0;
+    }
+
+    body {
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    .cig {
+        position: relative;
+        width: 25px;
+        height: 300px;
+        top: 40px; 
+        left: 5px;
+        box-shadow: inset 0 0 10px rgb(99, 99, 99);
+        background: rgb(219, 219, 219);
+        animation: cigmove 5s infinite;
+    }
+
+    .cig2 {
+        position: relative;
+        width: 25px;
+        height: 300px;
+        top: 55px; 
+        left: 10px;
+        box-shadow: inset 0 0 10px rgb(99, 99, 99);
+        background: rgb(219, 219, 219);
+        animation: cigmove2 1s infinite
+    }
+
+    .cig3 {
+        position: relative;
+        width: 25px;
+        height: 300px;
+        top: 55px; 
+        left: -77px;
+        box-shadow: inset 0 0 10px rgb(99, 99, 99);
+        background: rgb(219, 219, 219);
+        animation: cigmove 2s infinite;
+    }
+    
+    .cig4 {
+        position: relative;
+        width: 25px;
+        height: 300px;
+        top: 30px; 
+        left: -130px;
+        box-shadow: inset 0 0 10px rgb(99, 99, 99);
+        background: rgb(219, 219, 219);
+        animation: cigmove2 15s infinite
+    }
+
+    .cig5 {
+        position: relative;
+        width: 25px;
+        height: 300px;
+        top: 30px; 
+        left: -35px;
+        box-shadow: inset 0 0 10px rgb(99, 99, 99);
+        background: rgb(219, 219, 219);
+        animation: cigmove .5s infinite;
+    }
+
+    .cigtop {
+        position: relative;
+        width: 25px;
+        border-radius: 50%;
+        height: 10px;
+        top: -5px; 
+        left: 0px;
+        background: rgb(219, 219, 219);
+        z-index: 3;
+    }
+    
+    .cigbutt {
+        position: relative;
+        width: 25px;
+        height: 90px;
+        top: -10px; 
+        z-index: 2;
+        box-shadow: inset 0 5px 10px  rgb(115, 85, 26);
+        background: rgb(202, 125, 48);
+    }
+
+    .cigbuttbottom {
+        position: relative;
+        width: 25px;
+        border-radius: 50%;
+        height: 10px;
+        top: -15px; 
+        left: 0px;
+        background: rgb(202, 125, 48);
+        box-shadow: inset 0px 0px 6.5px rgb(115, 85, 26);
+        z-index: 1;
+    }
+
+    .cigboxfront {
+        position: absolute;
+        justify-content: center;
+        top: 180px;
+        left: 173px;
+        width: 190px;
+        height: 220px;
+        background: rgb(255, 255, 255);
+        z-index: 5;
+    }
+
+    .cigboxfrontleft {
+        position: relative;
+        width: 0;
+        height: 0;
+        top: -45px;
+        border-bottom: 90px solid rgb(255, 255, 255);
+        border-right: 50px solid transparent;
+        z-index: 6;
+    }
+
+    .cigboxfrontright {
+        position: relative;
+        width: 0;
+        height: 0;
+        top: -135px;
+        left: 140px;
+        border-bottom: 90px solid rgb(255, 255, 255);
+        border-left: 50px solid transparent;
+        z-index: 6;
+    }
+
+    @keyframes cigmove {
+            0% {
+                top: 60px;
+            }
+            50% {
+                top: 25px;
+            }
+            100% {
+                top: 60px;
+            }
+        }
+
+    @keyframes cigmove2 {
+            0% {
+                top: 50px;
+            }
+            50% {
+                top: 25px;
+            }
+            100% {
+                top: 50px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cigboxfront">
+        <div class="cigboxfrontleft"></div>
+        <div class="cigboxfrontright"></div>
+    </div>
+    <div class="cig">
+        <div class="cigtop"></div>
+        <div class="cigbutt"></div>
+        <div class="cigbuttbottom"></div>
+    </div>
+    <div class="cig2">
+        <div class="cigtop"></div>
+        <div class="cigbutt"></div>
+        <div class="cigbuttbottom"></div>
+    </div>
+    <div class="cig3">
+        <div class="cigtop"></div>
+        <div class="cigbutt"></div>
+        <div class="cigbuttbottom"></div>
+    </div>
+    <div class="cig4">
+        <div class="cigtop"></div>
+        <div class="cigbutt"></div>
+        <div class="cigbuttbottom"></div>
+    </div>
+    <div class="cig5">
+        <div class="cigtop"></div>
+        <div class="cigbutt"></div>
+        <div class="cigbuttbottom"></div>
+    </div>
+
+</body>
+</html>
