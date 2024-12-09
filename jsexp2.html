@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meow!</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            background-color: lightblue;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .trail-image {
+            position: absolute;
+            pointer-events: none;
+            width: 30px;
+            height: 30px;
+            opacity: 1;
+            animation: fadeTrail 1s forwards;
+        }
+
+        @keyframes fadeTrail {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const trailImageUrl = 'pawprint.png';
+
+        let lastTime = 0;
+
+        document.body.addEventListener('mousemove', function(event) {
+            const currentTime = Date.now();
+
+            if (currentTime - lastTime >= 50) {
+                const trailImage = document.createElement('img');
+                trailImage.src = trailImageUrl;
+                trailImage.classList.add('trail-image');
+                trailImage.style.left = `${event.pageX - 15}px`;
+                trailImage.style.top = `${event.pageY - 15}px`;
+                document.body.appendChild(trailImage);
+
+                setTimeout(() => {
+                    trailImage.remove();
+                }, 1000);
+
+                lastTime = currentTime;
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>???</title>
+    <style>
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            align-items: center;    
+        }
+
+        img {
+            max-width: 100%;  
+            max-height: 100%; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="vapeshopsign.png" alt="Vape Shop NOW OPEN" id="image">
+    <audio id="clickSound" src="explosionsound.mp3" preload="auto"></audio>
+
+    <script>
+        
+        const image = document.getElementById('image');
+
+        
+        image.addEventListener('click', function() {
+            
+            clickSound.play();
+
+            
+            image.src = "https://i.gifer.com/origin/d7/d7ac4f38b77abe73165d85edf2cbdb9e_w200.gif";
+
+            
+            setTimeout(function() {
+                
+                window.location.href = "https://chromewebstore.google.com/detail/vape-shop-front/jffmcdhikeohcodbbjlicaageokpmkpl";  // Replace with your desired URL
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
